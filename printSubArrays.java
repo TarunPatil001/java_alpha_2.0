@@ -2,8 +2,8 @@ public class printSubArrays {
 
     public static void subArrays(int numbers[]) {
         for (int row = 0; row < numbers.length; row++) {
-            for (int col = row; col <= numbers.length; col++) {
-                for (int k = row; k < col; k++) {
+            for (int col = row; col < numbers.length; col++) {
+                for (int k = row; k <= col; k++) {
                     System.out.print(numbers[k] + " ");
                 }
                 System.out.print("  ");
