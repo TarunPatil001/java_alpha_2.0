@@ -35,6 +35,10 @@ public class maxSubArrayI {
             cs = cs + numbers[i];
             if (cs < 0) {
                 cs = 0;
+
+                if (cs == 0) {
+                    cs = Math.max(cs, numbers[i]);
+                }
             }
             ms = Math.max(cs, ms);
         }
@@ -42,7 +46,7 @@ public class maxSubArrayI {
     }
 
     public static void main(String args[]) {
-        int numbers[] = { -2, -3, 4, -1, -2, 1, 5, -3 };
+        int numbers[] = { -1, -2, -3, -4 };
         kadanes(numbers);
     }
 }
