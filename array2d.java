@@ -2,13 +2,14 @@ import java.util.Scanner;
 
 public class array2d {
 
-    public static boolean searchArray(int matrix[][], int key) {
-        for (int i = 0; i < matrix.length; i++) {
+    public static boolean searchArray(int matrix[][]) {
+        int curr = 0;
+
+        for (int i = 1; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
-                if (matrix[i][j] == key) {
-                    System.out.print("found at cell: " + "(" + i + ", " + j + ")");
-                    return true;
-                }
+                int maximum = Math.max(matrix[i][j]);
+                System.out.print(maximum);
+                return true;
             }
         }
         System.out.println("Cell Not Found");
@@ -33,7 +34,7 @@ public class array2d {
             System.out.println();
         }
 
-        searchArray(matrix, 5);
+        searchArray(matrix);
 
     }
 }
