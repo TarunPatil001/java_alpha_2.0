@@ -1,7 +1,8 @@
 public class stringCompression {
 
     public static String compression(String str) {
-        String newStr = "";
+        // String newStr = "";
+        StringBuilder sb = new StringBuilder("");
 
         for (int i = 0; i < str.length(); i++) {
             Integer count = 1;
@@ -9,17 +10,17 @@ public class stringCompression {
                 count++;
                 i++;
             }
-            newStr += str.charAt(i);
+            sb.append(str.charAt(i));
             if (count > 1) {
-                newStr += count.toString();
+                sb.append(count.toString());
             }
         }
 
-        return newStr;
+        return sb.toString();
     }
 
     public static void main(String args[]) {
-        String str = "aaabbccccddd";
+        String str = "abcdd";
         System.out.println(compression(str));
     }
 }
